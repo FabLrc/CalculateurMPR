@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculateur d'Aide Rénovation</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Calculateur d'Aide Rénovation</h1>
+        <div class="form-group">
+            <label for="profil">Profil:</label>
+            <select id="profil">
+                <option value="bleu">Bleu</option>
+                <option value="jaune">Jaune</option>
+                <option value="violet">Violet</option>
+                <option value="rose">Rose</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="gainClasses">Gain de classes énergétiques:</label>
+            <select id="gainClasses">
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="coutHT">Coût des travaux (HT) (€):</label>
+            <input type="number" id="coutHT" min="0">
+        </div>
+        <div class="form-group">
+            <label>
+                <input type="checkbox" id="sortiePasseoir"> Sortie de passoir thermique
+            </label>
+        </div>
+        <button onclick="calculerAide()">Calculer l'aide</button>
+        <div id="resultat" class="result"></div>
+    </div>
+</body>
+</html>
